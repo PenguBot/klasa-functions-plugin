@@ -13,6 +13,14 @@ class FunctionsClient extends Client {
 	/**
 	 * @typedef {external:KlasaClientOptions} FunctionsClientOptions
 	 * @property {FunctionsClientPieceDefaults} [pieceDefaults={}] Overrides the defaults for all pieces
+	 * @property {aliasFunctionsOptions} [aliasFunctions={}]
+	 */
+
+	/**
+	 * @typedef {Object} aliasFunctionsOptions
+	 * @property {boolean} [enabled=false]
+	 * @property {boolean} [returnRun=false]
+	 * @property {string} [prefix="funcs"]
 	 */
 
 	/**
@@ -51,7 +59,7 @@ class FunctionsClient extends Client {
 		const { options } = this;
 
 		if (this.options.aliasFunctions.enabled) {
-			this.funcs = new Proxy(this.functions, {
+			this[options.aliasFunctions.prefix] = new Proxy(this.functions, {
 				get(target, prop) {
 					if (prop === Symbol.iterator) return target[Symbol.iterator].bind(target);
 					return target.has(prop) ? options.aliasFunctions.returnRun ? target.get(prop).run : target.get(prop) : 'That is not a registered function';

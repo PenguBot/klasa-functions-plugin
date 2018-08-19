@@ -23,11 +23,18 @@ declare module 'klasa-functions' {
 	export class FunctionStore extends Store<string, Function, typeof Function> { }
 
 	export type FunctionsClientOptions = {
-		pieceDefaults?: FunctionsClientPieceDefaults
+		pieceDefaults?: FunctionsClientPieceDefaults,
+		aliasFunctions?: aliasFunctionsOptions
 	} & KlasaClientOptions;
 
 	export type FunctionsClientPieceDefaults = {
 		functions?: PieceOptions
 	} & KlasaPieceDefaults;
+
+	export type aliasFunctionsOptions = {
+		enabled?: boolean,
+		returnRun?: boolean,
+		prefix?: string
+	}
 
 }
