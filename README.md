@@ -1,2 +1,44 @@
 # klasa-functions-plugin
-A basic plugin which adds a functions store to klasa
+A Klasa Plugin which adds Functions Store to your Klasa Bot
+
+## How To Use
+1. Install the plugin.
+
+    ```
+    npm i QuantumPlugin/klasa-functions-plugin
+    ```
+
+2. Use `klasa-functions` in your client.
+
+    ```js
+    const { Client } = require("klasa");
+    Client.use(require("klasa-functions");
+    
+    new Client({ aliasFunctions: { returnRun: true, prefix: "funcs" } }).login("Your Beautiful Token");
+    ```
+
+3. Create a new `function` in your `functions` folder with the name you want to access later, for example `test.js`.
+
+    ```js
+    const { Function } = require("klasa-functions");
+    
+    module.exports = class extends Function {
+    
+      run(){
+        // Your Code Here
+      }
+    
+    }
+    ```
+    
+4. Use these functions in your bot.
+
+    ```js
+    this.client.funcs.test();
+    ```
+    
+ 5. Done!
+ 
+# License
+MIT
+    
