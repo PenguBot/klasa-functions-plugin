@@ -14,7 +14,7 @@ A Klasa Plugin which adds Functions Store to your Klasa Bot
     const { Client } = require("klasa");
     Client.use(require("klasa-functions");
     
-    new Client({ aliasFunctions: { returnRun: true, prefix: "funcs" } }).login("Your Beautiful Token");
+    new Client({ aliasFunctions: { returnRun: true, prefix: "funcs", enabled: true } }).login("Your Beautiful Token");
     ```
 
 3. Create a new `function` in your `functions` folder with the name you want to access later, for example `test.js`.
