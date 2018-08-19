@@ -1,0 +1,36 @@
+{
+  "name": "klasa-functions",
+  "version": "0.0.1",
+  "description": "A basic plugin which adds a functions store to klasa",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuantumPlugin/klasa-functions-plugin.git"
+  },
+  "author": "QuantumlyTangled",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QuantumPlugin/klasa-functions-plugin/issues"
+  },
+  "homepage": "https://github.com/QuantumPlugin/klasa-functions-plugin#readme",
+  "devDependencies": {
+    "@types/node": "^10.5.8",
+    "docgen": "github:dirigeants/docsgen",
+    "eslint": "^5.3.0",
+    "eslint-config-klasa": "github:dirigeants/klasa-lint",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "markdownlint-cli": "^0.12.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "peerDependencies": {
+    "discord.js": "github:discordjs/discord.js",
+    "klasa": "github:dirigeants/klasa"
+  }
+}
